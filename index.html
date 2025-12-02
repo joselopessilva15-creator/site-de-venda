@@ -1,72 +1,111 @@
-<!DOCTYPE html>
+<article class="car-card" data-price="389900">
+  <img src="https://cdn.motor1.com/images/mgl/ANkVV/s3/2022-chevrolet-camaro-ss.jpg" alt="Chevrolet Camaro SS 2022">
+  <h3>Chevrolet Camaro SS 2022</h3>
+  <p>Preço: <strong>R$ 389.900</strong></p>
+  <button class="btn-buy">Comprar</button>
+</article>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoVenda - Encontre seu Carro Novo</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Carros</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>🚗 AutoVenda</h1>
-            <nav>
-                <ul>
-                    <li><a href="#carros">Veículos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="site-header">
+    <h1>Loja de Carros Premium</h1>
+    <nav>
+      <a href="#cars">Carros</a>* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial; background: #f0f0f0; }
 
-    <section id="filtros" class="container">
-        <h2>🔍 Filtre sua Busca</h2>
-        <div id="filter-options">
-            <input type="text" id="search-model" placeholder="Buscar por Modelo...">
-            <button id="apply-filters">Buscar</button>
-        </div>
-    </section>
+header { background: #222; color: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+header nav a { color: white; margin-left: 20px; text-decoration: none; }
 
-    <section id="carros" class="container">
-        <h2>Nossos Veículos em Destaque</h2>
-        <div id="car-list" class="grid-carros"> 
-            </div>
-    </section>
+.hero { position: relative; }
+.hero img { width: 100%; height: 320px; object-fit: cover; opacity: .85; }
+.hero-text { position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color:white; text-shadow: 2px 2px 4px black; text-align:center; }
 
-    <section id="contato" class="container">
-        <h2>📞 Fale Conosco</h2>
-        <p>Preencha o formulário e entraremos em contato:</p>
-        <form>
-            <input type="text" placeholder="Seu Nome">
-            <input type="email" placeholder="Seu E-mail">
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 AutoVenda. Todos os direitos reservados.</p>
-    </footer>
+.cars-list { padding: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.car-card { background: white; width: 300px; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,.2); text-align: center; }
+.car-card img { width: 100%; border-radius: 6px; margin-bottom: 10px; }
+.btn-buy { background: #007bff; border: none; padding: 10px 20px; color: white; border-radius: 6px; cursor: pointer; }
+.btn-buy:hover { background: #005bd1; }
 
-    <script src="script.js"></script> 
+.cart { background:white; margin:20px auto; padding:20px; width: 80%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.2);}
+.cart ul { list-style: none; margin-bottom:10px; }
+.cart li { margin-bottom: 5px; }
+
+footer { text-align: center; margin-top: 40px; background: #222; color: white; padding: 20px; }
+
+      <a href="#cart">Carrinho</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="hero">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBY2jKsnRIhaPYKbImriRISXBIjJNiT0QwMw&s" />
+    <div class="hero-text">
+      <h2>Os melhores carros estão aqui</h2>
+      <p>Qualidade, confiança e preço justo!</p>
+    </div>
+  </section>
+
+  <!-- Catálogo de Carros -->
+  <main id="cars" class="cars-list">
+
+    <article class="car-card" data-price="389900">
+      <img src="https://cdn.motor1.com/images/mgl/ANkVV/s3/2022-chevrolet-camaro-ss.jpg" alt="Chevrolet Camaro SS">
+      <h3>Chevrolet Camaro SS 2022</h3>
+      <p>Preço: <strong>R$ 389.900</strong></p>
+      <button class="btn-buy">Comprar</button>
+    </article>
+
+    <article class="car-card" data-price="289500">
+      <img src="https://cdn.motor1.com/images/mgl/7ZxBN/s3/mercedes-benz-c-300-2021.jpg" alt="Mercedes C300">
+      <h3>Mercedes-Benz C300 2021</h3>
+      <p>Preço: <strong>R$ 289.500</strong></p>
+      <button class="btn-buy">Comprar</button>
+    </article>
+
+    <article class="car-card" data-price="529900">
+      <img src="https://cdn.motor1.com/images/mgl/P99nJ/s3/bmw-x6-2020.jpg" alt="BMW X6">
+      <h3>BMW X6 2020</h3>
+      <p>Preço: <strong>R$ 529.900</strong></p>
+      <button class="btn-buy">Comprar</button>
+    </article>
+
+    <article class="car-card" data-price="52000">
+      <img src="https://cdn.motor1.com/images/mgl/0ZxO1/s3/fiat-argo-2020.jpg" alt="Fiat Argo">
+      <h3>Fiat Argo 2020</h3>
+      <p>Preço: <strong>R$ 52.000</strong></p>
+      <button class="btn-buy">Comprar</button>
+    </article>
+
+    <article class="car-card" data-price="178700">
+      <img src="https://cdn.motor1.com/images/mgl/0K77b/s3/ford-ranger-2020.jpg" alt="Ford Ranger">
+      <h3>Ford Ranger 4x4 2020</h3>
+      <p>Preço: <strong>R$ 178.700</strong></p>
+      <button class="btn-buy">Comprar</button>
+    </article>
+
+  </main>
+
+  <!-- Carrinho -->
+  <section id="cart" class="cart">
+    <h2>Carrinho de Compras</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <strong id="cart-total">R$ 0</strong></p>
+  </section>
+
+  <!-- Contato -->
+  <footer id="contact">
+    <h2>Contato</h2>
+    <p>E-mail: <a href="mailto:contato@lojadecarros.com">contato@lojadecarros.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-</html>// Dados simulados dos carros
-const carrosData = [
-    { 
-        modelo: "Fiat Mobi", 
-        ano: 2020, 
-        preco: 45000, 
-        marca: "Fiat", 
-        // 🔑 Caminho da imagem: pasta/nome-do-arquivo
-        imagem: "imagens/fiat-mobi.jpg" 
-    },
-    { 
-        modelo: "VW Gol", 
-        ano: 2018, 
-        preco: 38000, 
-        marca: "Volkswagen", 
-        // 🔑 Caminho da imagem: pasta/nome-do-arquivo
-        imagem: "imagens/vw-gol.jpg" 
-    },
-    // ... outros carros
-];<img src="imagens/fiat-mobi.jpg" alt="Fiat Mobi">
+</html>
